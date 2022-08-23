@@ -4,9 +4,7 @@
 //
 //  Created by Yue Sun on 8/23/22.
 //
-//  I formed two groups with other classmates:
-//
-
+//  
 //  - Group:
 //      - Sonia-96(Sun yue ): Part2
 //      - Junming Jin: Part1. His folder is named VolumeConvert-Jin
