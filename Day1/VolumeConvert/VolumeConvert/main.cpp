@@ -2,7 +2,7 @@
 //  main.cpp
 //  VolumeConvert
 //
-//  Created by junming jin on 8/23/22.
+//  Created by junming jin & yue sun on 8/23/22.
 //
 
 #include <iostream>
