@@ -44,7 +44,14 @@ int main() {
     for (x3=1; x3 <=20 ; x3+=2){
         cout << x3<<",";
     }
-     
+    cout << "\n";
+    cout << " Result from Part 3 with if statement:";
+    for(int x4 = 1; x4 <= 20; x4++){
+              if ( x4 % 2 != 0 )
+              {
+                  cout << x4 <<" ";
+            }
+    }
    // Part 4
     cout << "\n";
     int PN = 0;
@@ -75,5 +82,5 @@ int main() {
  
 
     return 0;
-      
-}
+    }
+
