@@ -86,7 +86,7 @@ int main() {
                     roman += "IX";
                         
                     }
-            }
+            
         else if( piece >= 5 ){
                     roman += "V" ;
                     
@@ -106,6 +106,6 @@ int main() {
             }
         
     cout << " Roman numeral version:"<< roman <<"\n";
-    
+    }
     return 0;
 }
