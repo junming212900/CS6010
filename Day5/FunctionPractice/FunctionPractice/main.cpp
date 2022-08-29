@@ -9,6 +9,7 @@
 #include <cmath>
 
 using namespace std;
+// Part 2 -1 My own funcation-calculating the t
 float Thirdsidelengthcalculater ( float side1 , float side2){
     
     return sqrt( pow(side1,2) + pow(side2,2) ); // return
