@@ -8,7 +8,7 @@
 #include <iostream>
 #include <string>
 #include <cmath>
-//#include "LetterHelpers.hpp"
+#include "LetterHelpers.hpp"
 #include "computinghelper.hpp"
 using namespace std;
 int main() {

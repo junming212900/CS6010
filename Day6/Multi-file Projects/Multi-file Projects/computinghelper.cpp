@@ -4,9 +4,8 @@
 //
 //  Created by junming jin on 8/29/22.
 //
-#include <iostream>
+
 #include <string>
-#include <cmath>
 #include "computinghelper.hpp"
 #include "LetterHelpers.hpp"
 using namespace std;
