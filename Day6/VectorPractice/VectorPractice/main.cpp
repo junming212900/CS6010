@@ -83,14 +83,14 @@ vector<int> myvector;
 }
 
 // make a vector chars
-vector<char>mychars(5,a);
-vector<string>mychars(5,aha);// five aha in the vector.
-// can we add to s tring
-sring dummy = "blash";
-for(char c: mychars){// ex1
-    dummy+= c;
-}
-dummy = dummy + mychars[0];//ex2
+//vector<char>mychars(5,a);
+//vector<string>mychars(5,aha);// five aha in the vector.
+//// can we add to s tring
+//sring dummy = "blash";
+//for(char c: mychars){// ex1
+//    dummy+= c;
+//}
+//dummy = dummy + mychars[0];//ex2
 
 
 
