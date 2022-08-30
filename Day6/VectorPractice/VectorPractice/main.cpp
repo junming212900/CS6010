@@ -67,4 +67,30 @@ vector<int> myvector;
         }
    
     return 0;
+    
+    // vector[number] = number2
+    // vector[num.size()-1] = 200 (change the last element)
+    // vector<int> inserttovector(int pos, int value,vector<int> input)
+    // {if ( input.size()-1 < pos ){
+    //input[pos]= value;}
+    
+//    for ( int = input.size(); i < input.size(); i++){
+//        input[i+1]= input[i];} // left to right create
+//    for ( int i = input.size(); i > pos; i--){
+//        input[i]= input[i-1]; // right to left
+    
+//    }
 }
+
+// make a vector chars
+vector<char>mychars(5,a);
+vector<string>mychars(5,aha);// five aha in the vector.
+// can we add to s tring
+sring dummy = "blash";
+for(char c: mychars){// ex1
+    dummy+= c;
+}
+dummy = dummy + mychars[0];//ex2
+
+
+
