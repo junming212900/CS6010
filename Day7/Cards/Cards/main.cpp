@@ -24,7 +24,6 @@ struct Card
     int num_suits = 4;
     int num_ranks = 13;
     };
-
 struct Deck
     {
     vector<Card> cards;
@@ -32,9 +31,24 @@ struct Deck
     int max_deck_size = 52;
     };
 
-void initialize(Deck&);
-void initialize(Deck& deck);
+void initialize(Deck&);// initialize 初始化
+
+void print_deck(const Deck&);
+void print_card(const Card&);
+void print_deck(const Deck& deck)
 {
+    for (Card c : deck.cards)
+    {
+        print_card(c);
+    }
+}
+void print_card(const Card& card)
+{
+    std ::cout<< "Rank = "<< card.rank << " " <<"Suit"<< card.suit << "\n";
+}
+void initialize(Deck& deck)
+{
+
     Card card;
     for (int suit = 0; suit< card.num_suits; suit++)
     {
@@ -47,40 +61,14 @@ void initialize(Deck& deck);
     }
 
 }
-void print_deck(const Deck& deck)
-{
-    for (Card c : deck.cards)
-    {
-        cout << card(c);
-    }
-}
-void print_card(const Card& card)
-{
-    std ::cout<< "Rank = "<< card.rank << " " <<"Suit"<< card.suit << "\n";
-}
-
 int main() {
-    
-{
     Deck my_deck;
     initialize(my_deck);
     print_deck(my_deck);
-
     
-    void print_deck(const Deck&);
-    void print_card(const Card&);
+ 
+    
     return 0;
 }
 
-//vector<card> card(string input,string input2){
-////    string suit[] ={"spades","hearts","diamonds","clubs"};
-//    string rank[] = {"one","two","three","four","five","six","seven","eight","nine","ten","jake","queen","king"};
-//
-//    cout << card.push_back("","Joker1");
-//    cout << card.push_back("","Joker2");
-//    vector<card>cards;
-//
-//    for(int i= 0 ; i < 4; i ++ ){
-//    for(int j = 0; j < 13; j++){
-//        cards.push_back(suit[i],rank[j]);
-//}
+
