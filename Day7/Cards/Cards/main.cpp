@@ -44,7 +44,7 @@ void print_deck(const Deck& deck)
 }
 void print_card(const Card& card)
 {
-    std ::cout<< "Rank = "<< card.rank << " " <<"Suit"<< card.suit << "\n";
+    std ::cout<< "Rank  "<< card.rank << " " <<"Suit"<< card.suit << "\n";
 }
 void initialize(Deck& deck)
 {
