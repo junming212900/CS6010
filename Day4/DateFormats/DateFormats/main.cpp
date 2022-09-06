@@ -16,7 +16,7 @@ int main(int argc, const char * argv[]) {
     std::string day_year;
     std::string month; // position: 0-1
     std::string day; // position: 3-4
-    std::string year; // position: 6-9
+    std::string year; // position: 6-907004
     std::string s_month;
     
     // ask the user to enter a date
@@ -24,11 +24,12 @@ int main(int argc, const char * argv[]) {
     std::cin >> date;
     
     // find month
-    for (int i = 0; i < date.find('/'); i++){
-      month += date.substr(i,1);
+    for (int i = 0; i < date.find('/'); i++){ //
+      month += date.substr(i,1); //因为是loop 这里是一个一个数字得出的 最后组成两数字（其实这里可以不用loop和find）
     }
     // find day
     day_year = date.substr((date.find('/')+1),7);// (date.rfind(‘/’)+1)
+    
     for (int x = 0; x < day_year.find('/'); x++){
       day += day_year.substr(x,1);
     }

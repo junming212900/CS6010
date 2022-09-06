@@ -61,16 +61,16 @@ int main()
     ErrorExit("Contains() - test 2");
   }
   if ( FindMin(v1) != -1){
-    ErrorExit("FinMin() - test 3");
+    ErrorExit("FinMin() - test 1");
     }
   if ( FindMax(v1) != 5){
-    ErrorExit("FindMax() - test 3");
+    ErrorExit("FindMax() - test 1");
       }
   if ( Average(v2) != 2){
-    ErrorExit("Average() - test 3");
+    ErrorExit("Average() - test 2");
         }
   if ( !IsSorted(v2)){
-    ErrorExit("Contains() - test 3");
+    ErrorExit("Contains() - test 2");
           }
   /* 
    * The vector 'empty' doesn't contain anything, so this should return false
