@@ -2,7 +2,7 @@
 //  main.cpp
 //  BookAnalyzer
 //
-//  Created by Jinyi Zhou on 9/1/22.
+//  Created by Junming Jin on 9/1/22.
 //
 
 #include <iostream>
