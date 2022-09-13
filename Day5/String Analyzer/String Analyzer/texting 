@@ -1,0 +1,13 @@
+
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+int main (){
+    int* ptr;
+    int var = 7;
+    int foo = 21 
+    ptr = &var;
+    cout << ptr;
+    return 0;
+}
