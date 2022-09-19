@@ -28,7 +28,7 @@ void freeVector(MyVec vec) {
 }
 
 void pushBack(MyVec& vec, int i) {
-    
+
   vec.data[vec.size] = i;
   vec.size++;
 }
