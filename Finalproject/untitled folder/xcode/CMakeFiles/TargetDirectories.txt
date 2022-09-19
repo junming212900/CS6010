@@ -1,0 +1,3 @@
+/Users/junmingjin/MSD/CS6010/myGithubRepo/Finalproject/untitled folder/xcode/CMakeFiles/testSFML.dir
+/Users/junmingjin/MSD/CS6010/myGithubRepo/Finalproject/untitled folder/xcode/CMakeFiles/ALL_BUILD.dir
+/Users/junmingjin/MSD/CS6010/myGithubRepo/Finalproject/untitled folder/xcode/CMakeFiles/ZERO_CHECK.dir
