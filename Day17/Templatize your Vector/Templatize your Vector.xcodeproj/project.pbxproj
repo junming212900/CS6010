@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		43D79F3928DA159B00ACD96E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43D79F3828DA159B00ACD96E /* main.cpp */; };
-		43D79F4128DA2DED00ACD96E /* vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43D79F3F28DA2DED00ACD96E /* vector.cpp */; };
+		43D79F4F28DA342700ACD96E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43D79F4E28DA342700ACD96E /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		43D79F3328DA159B00ACD96E /* CopyFiles */ = {
+		43D79F4928DA342700ACD96E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -24,14 +23,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		43D79F3528DA159B00ACD96E /* Group HW: Vector Upgrades */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Group HW: Vector Upgrades"; sourceTree = BUILT_PRODUCTS_DIR; };
-		43D79F3828DA159B00ACD96E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		43D79F3F28DA2DED00ACD96E /* vector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vector.cpp; sourceTree = "<group>"; };
-		43D79F4028DA2DED00ACD96E /* vector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vector.hpp; sourceTree = "<group>"; };
+		43D79F4B28DA342700ACD96E /* Templatize your Vector */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Templatize your Vector"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43D79F4E28DA342700ACD96E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		43D79F5628DA34AF00ACD96E /* MyVector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MyVector.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		43D79F3228DA159B00ACD96E /* Frameworks */ = {
+		43D79F4828DA342700ACD96E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,67 +39,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		43D79F2C28DA159B00ACD96E = {
+		43D79F4228DA342700ACD96E = {
 			isa = PBXGroup;
 			children = (
-				43D79F3728DA159B00ACD96E /* Group HW: Vector Upgrades */,
-				43D79F3628DA159B00ACD96E /* Products */,
+				43D79F4D28DA342700ACD96E /* Templatize your Vector */,
+				43D79F4C28DA342700ACD96E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		43D79F3628DA159B00ACD96E /* Products */ = {
+		43D79F4C28DA342700ACD96E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				43D79F3528DA159B00ACD96E /* Group HW: Vector Upgrades */,
+				43D79F4B28DA342700ACD96E /* Templatize your Vector */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		43D79F3728DA159B00ACD96E /* Group HW: Vector Upgrades */ = {
+		43D79F4D28DA342700ACD96E /* Templatize your Vector */ = {
 			isa = PBXGroup;
 			children = (
-				43D79F3828DA159B00ACD96E /* main.cpp */,
-				43D79F4028DA2DED00ACD96E /* vector.hpp */,
-				43D79F3F28DA2DED00ACD96E /* vector.cpp */,
+				43D79F4E28DA342700ACD96E /* main.cpp */,
+				43D79F5628DA34AF00ACD96E /* MyVector.hpp */,
 			);
-			path = "Group HW: Vector Upgrades";
+			path = "Templatize your Vector";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		43D79F3428DA159B00ACD96E /* Group HW: Vector Upgrades */ = {
+		43D79F4A28DA342700ACD96E /* Templatize your Vector */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43D79F3C28DA159B00ACD96E /* Build configuration list for PBXNativeTarget "Group HW: Vector Upgrades" */;
+			buildConfigurationList = 43D79F5228DA342700ACD96E /* Build configuration list for PBXNativeTarget "Templatize your Vector" */;
 			buildPhases = (
-				43D79F3128DA159B00ACD96E /* Sources */,
-				43D79F3228DA159B00ACD96E /* Frameworks */,
-				43D79F3328DA159B00ACD96E /* CopyFiles */,
+				43D79F4728DA342700ACD96E /* Sources */,
+				43D79F4828DA342700ACD96E /* Frameworks */,
+				43D79F4928DA342700ACD96E /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Group HW: Vector Upgrades";
-			productName = "Group HW: Vector Upgrades";
-			productReference = 43D79F3528DA159B00ACD96E /* Group HW: Vector Upgrades */;
+			name = "Templatize your Vector";
+			productName = "Templatize your Vector";
+			productReference = 43D79F4B28DA342700ACD96E /* Templatize your Vector */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		43D79F2D28DA159B00ACD96E /* Project object */ = {
+		43D79F4328DA342700ACD96E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
-					43D79F3428DA159B00ACD96E = {
+					43D79F4A28DA342700ACD96E = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
 			};
-			buildConfigurationList = 43D79F3028DA159B00ACD96E /* Build configuration list for PBXProject "Group HW: Vector Upgrades" */;
+			buildConfigurationList = 43D79F4628DA342700ACD96E /* Build configuration list for PBXProject "Templatize your Vector" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,30 +106,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 43D79F2C28DA159B00ACD96E;
-			productRefGroup = 43D79F3628DA159B00ACD96E /* Products */;
+			mainGroup = 43D79F4228DA342700ACD96E;
+			productRefGroup = 43D79F4C28DA342700ACD96E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				43D79F3428DA159B00ACD96E /* Group HW: Vector Upgrades */,
+				43D79F4A28DA342700ACD96E /* Templatize your Vector */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		43D79F3128DA159B00ACD96E /* Sources */ = {
+		43D79F4728DA342700ACD96E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43D79F4128DA2DED00ACD96E /* vector.cpp in Sources */,
-				43D79F3928DA159B00ACD96E /* main.cpp in Sources */,
+				43D79F4F28DA342700ACD96E /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		43D79F3A28DA159B00ACD96E /* Debug */ = {
+		43D79F5028DA342700ACD96E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -190,7 +186,7 @@
 			};
 			name = Debug;
 		};
-		43D79F3B28DA159B00ACD96E /* Release */ = {
+		43D79F5128DA342700ACD96E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -241,7 +237,7 @@
 			};
 			name = Release;
 		};
-		43D79F3D28DA159B00ACD96E /* Debug */ = {
+		43D79F5328DA342700ACD96E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -249,7 +245,7 @@
 			};
 			name = Debug;
 		};
-		43D79F3E28DA159B00ACD96E /* Release */ = {
+		43D79F5428DA342700ACD96E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -260,25 +256,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		43D79F3028DA159B00ACD96E /* Build configuration list for PBXProject "Group HW: Vector Upgrades" */ = {
+		43D79F4628DA342700ACD96E /* Build configuration list for PBXProject "Templatize your Vector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				43D79F3A28DA159B00ACD96E /* Debug */,
-				43D79F3B28DA159B00ACD96E /* Release */,
+				43D79F5028DA342700ACD96E /* Debug */,
+				43D79F5128DA342700ACD96E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		43D79F3C28DA159B00ACD96E /* Build configuration list for PBXNativeTarget "Group HW: Vector Upgrades" */ = {
+		43D79F5228DA342700ACD96E /* Build configuration list for PBXNativeTarget "Templatize your Vector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				43D79F3D28DA159B00ACD96E /* Debug */,
-				43D79F3E28DA159B00ACD96E /* Release */,
+				43D79F5328DA342700ACD96E /* Debug */,
+				43D79F5428DA342700ACD96E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 43D79F2D28DA159B00ACD96E /* Project object */;
+	rootObject = 43D79F4328DA342700ACD96E /* Project object */;
 }
