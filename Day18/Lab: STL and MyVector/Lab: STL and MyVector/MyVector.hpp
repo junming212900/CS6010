@@ -1,8 +1,8 @@
-
+//
 // MyVector.hpp
 // STLAndMyVector
 //
-// Created by Jinyi Zhou & Junming Jin on 9/21/22.
+// Created by Jinyi Zhou on 9/21/22.
 //
 #ifndef vector_hpp
 #define vector_hpp
