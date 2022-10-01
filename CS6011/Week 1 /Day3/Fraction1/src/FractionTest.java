@@ -15,13 +15,13 @@ class FractionTest {
         Fraction f5 = new Fraction(1, 3);
         Fraction f6 = f4.plus(f5);
 
-        Assertions.assertEquals(f3.to_String(), "5/6");
+        Assertions.assertEquals(f3.to_String(), "5/6");// 经过test 如果faction 的没有问题。预估的答案应该是5/6 , f3 这里已经是string 化了的。assertions.assertEquals(跟其他的faction， 预估的结果）
 
     }
 
     @Test
     void minus() {
-        Fraction f7 = new Fraction(1, 2);
+        Fraction f7 = new Fraction(1, 2);// 通过fraction 得出 1/2
         Fraction f8 = new Fraction(1, 3);
         Fraction f9 = f7.minus(f8);
 
@@ -74,6 +74,15 @@ class FractionTest {
         Fraction f30 = new Fraction(-3, 5);
         Fraction f31 = f30.reciprocal();
         Assertions.assertEquals(f31.to_String(), "-5/3");
+    }
+    @Test
+    public void testDenominatorIsZero() {
+        Throwable exception = assertThrows(
+                IllegalArgumentException.class, () -> {
+                    Fraction test = new Fraction(1,0);
+                }
+        );
+        assertEquals("the denominator must not be zero!", exception.getMessage());
     }
 }
 
