@@ -88,6 +88,12 @@ class FractionTest {
         assertEquals("the denominator must not be zero!", exception.getMessage());
     }
     @Test
+    public void testCompareTo() {
+        Fraction f32 = new Fraction(1, 2);
+        Fraction f33 = new Fraction(1, 2);
+        Assertions.assertEquals(f32.compareTo(f33), 0);
+    }
+    @Test
     public void testSort() {
         Fraction f34 = new Fraction(1, 4);
         Fraction f35 = new Fraction(1, 3);
