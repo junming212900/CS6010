@@ -1,4 +1,4 @@
-public class Fraction {
+public class Fraction implements Comparable<Fraction>  {
     private long numerator;
     private long denominator;
     private long GCD() {
@@ -68,6 +68,10 @@ public class Fraction {
     }
     public double toDouble() {
         return (double) this.numerator / this.denominator;
+    }
+
+    public int compareTo(Fraction rhs){
+        return Double.compare(this.toDouble(), rhs.toDouble());
     }
 }
 
