@@ -20,7 +20,7 @@ public class SineWave implements AudioComponent {
     @Override
     public boolean hasInput() {
         return false;
-    }
+    }// 这个正弦波是一个本身的波段，但是在其他的wave 是可以就收输入的
 
     @Override
     public void connectInput(AudioComponent input) {
