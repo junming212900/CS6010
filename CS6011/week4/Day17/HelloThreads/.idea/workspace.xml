@@ -1,29 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c616ee4f-77fd-422f-9408-bfdb30a2ee51" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/AudioClipTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/AudioComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/AudioComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/AudioComponentWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/AudioComponentWidget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/AudioListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/AudioListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/Filter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/GuiSampleApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/LinearRamp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/LinearRamp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/Mixer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/Mixer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/SineWave.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/SineWave.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/SquareWave.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/SquareWave.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/VFSineWave.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/VFSineWave.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/resources/com/example/synthesizer/hello-view.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/test/com/example/synthesizer/AudioClipTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/test/com/example/synthesizer/FilterTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/test/com/example/synthesizer/MixerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloThreads/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../Practice/Abstract Classes/src/student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Practice/Abstract Classes/src/student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../Practice/Inheritance/src/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Practice/Inheritance/src/Mouse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../Practice/Inheritance/src/mouse1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Practice/Inheritance/src/mouse1.java" afterDir="false" />
@@ -55,14 +37,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/junmingjin/MSD/CS6011/week4/Day17/HelloThreads&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/junmingjin/MSD/CS6011/week4/Day17/HelloThreads",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -72,7 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667413143499</updated>
       <workItem from="1667413145424" duration="99000" />
-      <workItem from="1667413251364" duration="268000" />
+      <workItem from="1667413251364" duration="705000" />
     </task>
     <servers />
   </component>
