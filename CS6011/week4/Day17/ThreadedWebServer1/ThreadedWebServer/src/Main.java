@@ -13,7 +13,7 @@ public class Main {
             ConnectionHandler ch = new ConnectionHandler(clientSocket);
             Thread thread = new Thread (ch);
             thread.start();
-            System.out.print(Thread.currentThread().threadId());
+            System.out.print(Thread.currentThread().getId());
         }
     }
 }
