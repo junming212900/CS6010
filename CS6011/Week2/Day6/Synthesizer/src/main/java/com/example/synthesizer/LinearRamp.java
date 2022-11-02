@@ -14,9 +14,17 @@ public class LinearRamp implements AudioComponent {
         AudioClip ac = new AudioClip();
         for (int i = 0; i < AudioClip.totalSample; i++) {
             ac.setSample(i,
-                    (int) ((this.start * (AudioClip.totalSample - i ) + this.stop * i ) / AudioClip.totalSample));
+                    (int) ((this.start * (AudioClip.totalSample - i) + this.stop * i) / AudioClip.totalSample));
         }
         return ac;
+    }
+
+    public void setStart(float start) {
+        this.start = start;
+    }
+
+    public void setStop(float stop) {
+        this.stop = stop;
     }
 
     @Override

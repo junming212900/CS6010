@@ -7,10 +7,10 @@ public class Main {
                 for (int j = 1; j <= 100; j++) {
                     if (j % 10 == 0) {
                         System.out.println("hello number " + j + " from thread number " +
-                                Thread.currentThread().getId() + "; ");
+                                Thread.currentThread().threadId() + "; ");
                     } else {
                         System.out.print("hello number " + j + " from thread number " +
-                                Thread.currentThread().getId() + "; ");
+                                Thread.currentThread().threadId() + "; ");
                     }
                 }
             });

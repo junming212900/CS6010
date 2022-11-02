@@ -1,7 +1,7 @@
 package com.example.synthesizer;
 
 public class Filter implements AudioComponent { // changes frequency
-    private final double scale;
+    private double scale;
     private AudioComponent input;
 
     public Filter(double scale) {
@@ -11,6 +11,7 @@ public class Filter implements AudioComponent { // changes frequency
 
     @Override
     public AudioClip getClip() {
+        System.out.println("filter get clip, scale is " + scale);
         if (this.input != null) {
             AudioClip original = this.input.getClip();
             AudioClip result = new AudioClip();
@@ -28,6 +29,10 @@ public class Filter implements AudioComponent { // changes frequency
         return null;
     }
 
+    public void setScale(double scale) {
+        this.scale = scale;
+    }
+
     @Override
     public boolean hasInput() {
         return true;
@@ -35,6 +40,12 @@ public class Filter implements AudioComponent { // changes frequency
 
     @Override
     public void connectInput(AudioComponent input) { // use this method to connect to input(s)
-        this.input  = input;
+        this.input = input;
     }
+
+    public void removeInput(AudioComponent input) {
+        this.input = null;
+    }
+
+    ;
 }

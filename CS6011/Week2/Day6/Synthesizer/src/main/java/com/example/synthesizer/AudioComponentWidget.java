@@ -3,167 +3,175 @@ package com.example.synthesizer;
 import javafx.geometry.Bounds;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 
-import java.awt.*;
-
 public class AudioComponentWidget extends Pane {
+    protected AnchorPane parent_;
+    protected AudioComponent audioComponent_;
+    protected AudioComponentWidget widgetIamSendingOutputTo_;
+    protected AudioComponentWidget WidgetIamReceivingInputFrom_;
+    protected HBox baseLayout;
+    protected VBox center;
+    protected Line line_; // for output
+    protected Label nameLabel_;
+    public String name_;
+    protected Circle input_ = null; // for widgets with input circle (2nd constructor)
+    double mouseStartDragX_, mouseStartDragY_, widgetStartDragX_, widgetStartDragY_;
 
-    AudioComponentWidget(AudioComponent ac, AnchorPane parent, String name) {
-
+    public AudioComponentWidget(AudioComponent ac, AnchorPane parent, String name) {
+        audioComponent_ = ac;
         parent_ = parent;
         name_ = name;
-        audioComponent_ = ac;
+        widgetIamSendingOutputTo_ = null;
+        WidgetIamReceivingInputFrom_ = null;
 
+        // base layout of widget
         baseLayout = new HBox();
-        baseLayout.setStyle("-fx-border-color: black; -fx-border-image-width: 8;-fx-backgroud-color:white");
+        baseLayout.setStyle("-fx-border-color: black; -fx-border-image-width: 8; -fx-background-color: white");
         this.getChildren().add(baseLayout);
-// rightside
-        VBox rightSide = new VBox();
-        rightSide.setAlignment(Pos.CENTER);
-        rightSide.setPadding(new Insets(3));
-        rightSide.setSpacing(5);
 
+        // left side of widget
+        VBox leftSide = new VBox();
+        leftSide.setAlignment(Pos.CENTER_LEFT);
+        leftSide.setPadding(new Insets(3));
+        leftSide.setSpacing(5);
+        // close button
         Button closeBtn = new Button("x");
-//
-        closeBtn.setOnAction(e -> destroyWidget());
-        Circle output = new Circle(10);
-        Circle outputCircle = new Circle(Color.BLUE);
+        closeBtn.setOnAction(e -> closeWidget());
+        leftSide.getChildren().add(closeBtn);
 
-        outputCicle.setFill(Color.BLUE);
-        outputCicle.setOnMousePressed(e -> startConnection(e, outputCircle));
-        outputCicle.setOnMouseDragged(e -> moveConnection(e, outputCircle));
-        outputCicle.setOnMouseReleased(e -> endConnection(e, outputCircle));
-
-        rightSide.getChildren().add(closeBtn);
-        rightSide.getChildren().add(outputCircle);
-// Center Portion of Widget
-        VBox center = new VBox();
-        rightSide.setAlignment(Pos.CENTER);
-
-        nameLable_ = new lable();
-        nameLable_.setMouseTransparent(true);
-        nameLable_.setText("Sine Wave (440 Hz)");
-        Slider slider = new Slider(220, 880, 440);
-        slider.setOnMouseDragged(e -> handleSlider(e, slider));
-
-        center.getChildren().add(nameLable_);
-        center.getChildren().add(slider);
-
+        // center portion of widget
+        center = new VBox();
+        center.setAlignment(Pos.CENTER);
+        // name label
+        nameLabel_ = new Label();
+        nameLabel_.setMouseTransparent(true);
+        nameLabel_.setText(name_);
+        center.getChildren().add(nameLabel_);
+        // dragging
         center.setOnMousePressed(e -> startDrag(e));
         center.setOnMouseDragged(e -> handleDrag(e));
 
+        // add panels (from left to right) to base layout and add widget to canvas
+        baseLayout.getChildren().add(leftSide);
         baseLayout.getChildren().add(center);
-        baseLayout.getChildren().add(rightSide);
-
-        this.setLayoutX(50);
-
-
-        rightSide.setPadding(new Insets(5));
-        rightSide.setPadding(5);
-
-
-        baseLayout.getChildren().add(rightSide);
-        this.getChildren().add(baseLayout);
-
-        this.setLayoutX(50);
+        this.setLayoutX(160);
         this.setLayoutY(100);
-
-        Parent_.getChildren().add(this)
+        parent_.getChildren().add(this);
     }
 
-    private void closeWidget() {
-        parent_.getChildren().remove(this);
-        GuiSampleApplication.widgets_.remove(this);
-    }
+    // used for output circle connection
+    protected void endConnection(MouseEvent e, Circle outputCircle) {
+        boolean connectedToWidget = false;
+        System.out.println("here");
+        // FIXME: DELETE LINE #78
+        SynthesizeApplication.widgetList_.remove(this);
+        if (SynthesizeApplication.widgetList_.size() != 0) {
+            System.out.println("looking at # of wid: " + SynthesizeApplication.widgetList_);
+            for (AudioComponentWidget acw : SynthesizeApplication.widgetList_) {
+                Circle inputCircle = acw.input_;
+                Bounds acwBounds = inputCircle.localToScreen(inputCircle.getBoundsInLocal());
+                double acwDistance = Math.sqrt(Math.pow(acwBounds.getCenterX() - e.getScreenX(), 2.0) +
+                        Math.pow(acwBounds.getCenterY() - e.getScreenY(), 2.0));
 
-    private void startDrag(MouseEvent e) {
-        mouseStartDragX_ = e.getSceneX();
-        mouseStartDragY_ = e.getSceneY();
-        widgetStartDragX_ = this.getLayoutX;
-        widgetStartDragY_ = this.getLayoutY;
-
-    }
-
-    private void handleDrag(MouseEvent e) {
-        double mouseDelx = e.getSceneX() - mouseStartDragX_;
-        double mouseDely = e.getSceneY() - mouseStartDragY_;
-        this.relocate(widgetStartDragX_ + mouseDelx, widgetStartDragY_ + mouseDely);
-
-    }
-
-    private void endConnection(MouseEvent e, Circle outputCircle) {
-        Circle speaker = GuiSampleApplication.speaker_;
-        Bounds speakerBounds = speaker.localToScene(speaker.getBoundsInLocal());
-        double distance = Math.sqrt(Math.pow(speakerBounds.getCenterX() - e.getSceneX(), 2.0) + Math.pow(speakerBounds.getCenterY() - e.getSceneY(), 2.0));
+                System.out.println("distance is " + acwDistance + " to " + acw.name_);
+                if (acwDistance < 10) {
+                    // when doing connection, start from the widget connected to speaker first
+                    acw.WidgetIamReceivingInputFrom_ = this;
+                    this.widgetIamSendingOutputTo_ = acw;
+                    acw.getAudioComponent().connectInput(this.getAudioComponent());
+                    connectedToWidget = true;
+                } else if (!connectedToWidget) {
+                    parent_.getChildren().remove(line_);
+                    line_ = null;
+                }
+            }
+        }
+        // handle connection to speaker
+        Circle speaker = SynthesizeApplication.speaker_;
+        Bounds speakerBounds = speaker.localToScreen(speaker.getBoundsInLocal());
+        double distance = Math.sqrt(Math.pow(speakerBounds.getCenterX() - e.getScreenX(), 2.0) +
+                Math.pow(speakerBounds.getCenterY() - e.getScreenY(), 2.0));
+        System.out.println("dist: " + distance);
         if (distance < 10) {
-            // Handle actually connecting to speaker
-            GuiSampleApplication.connectedWidgetsToSpeaker_.add(this);
-        } else {
+            // handle actually connecting to speaker
+            SynthesizeApplication.widgets_.add(this);
+        } else if (!connectedToWidget) {
             parent_.getChildren().remove(line_);
             line_ = null;
         }
-
     }
 
-    private void moveConnection(MouseEvent e, Circle outputCircle) {
+    protected void moveConnection(MouseEvent e, Circle outputCircle) {
         Bounds parentBounds = parent_.getBoundsInParent();
-        line_.setEndx(e.getSceneX() - parentBounds.getMinX());
-        line_.setEndy(e.getSceneY() - parentBounds.getMinY());
+        line_.setEndX(e.getSceneX() - parentBounds.getMinX());
+        line_.setEndY(e.getSceneY() - parentBounds.getMinY());
     }
 
-    private void startConnection(MouseEvent e, Circle outputCircle) {
+    protected void handleDrag(MouseEvent e) {
+        double mouseDelX = e.getSceneX() - mouseStartDragX_;
+        double mouseDelY = e.getSceneY() - mouseStartDragY_;
+        this.relocate(widgetStartDragX_ + mouseDelX, widgetStartDragY_ + mouseDelY);
+    }
+
+    protected void startDrag(MouseEvent e) {
+        mouseStartDragX_ = e.getSceneX();
+        mouseStartDragY_ = e.getSceneY();
+
+        widgetStartDragX_ = this.getLayoutX();
+        widgetStartDragY_ = this.getLayoutY();
+    }
+
+    protected void handleSlider(MouseEvent e, Slider slider) {
+    }
+
+    protected void startConnection(MouseEvent e, Circle outputCircle) {
+        // if line exists (connected to others), remove that line
         if (line_ != null) {
             parent_.getChildren().remove(line_);
         }
+
         Bounds parentBounds = parent_.getBoundsInParent();
         Bounds bounds = outputCircle.localToScene(outputCircle.getBoundsInLocal());
+
         line_ = new Line();
         line_.setStrokeWidth(4);
         line_.setStartX(bounds.getCenterX() - parentBounds.getMinX());
         line_.setStartY(bounds.getCenterY() - parentBounds.getMinY());
         line_.setEndX(e.getSceneX());
-        line_.setEndX(e.getSceneY());
+        line_.setEndY(e.getSceneY());
+        // for any widget we have to add it to the parent
         parent_.getChildren().add(line_);
     }
 
-    private void destroyWidget() {
+    protected void closeWidget() {
         parent_.getChildren().remove(this);
-        GuiSampleApplication.widgets_.remove(this);
+        SynthesizeApplication.widgets_.remove(this);
+        SynthesizeApplication.widgetList_.remove(this);
+        if (widgetIamSendingOutputTo_ != null) {
+            widgetIamSendingOutputTo_.getAudioComponent().removeInput(this.getAudioComponent());
+        }
         if (line_ != null) {
-            parent_getChildren.remove(line_);
+            parent_.getChildren().remove(line_);
         }
+    }
 
-        private void handleSlider (MouseEvent e){
-            double freq = slider.getValue();
-            nameLable_.setText("Sine Wave (" + (int) freq + "Hz");
-            ((SineWave) audioComponent_).setFrequency(freq);
-        }
+    public AudioComponent getAudioComponent() {
+        return audioComponent_;
+    }
 
-
-        public AudioComponent getAudioCompnent () {
-            return audioCompnent_;
-        }
-        private AnchorPane parent_;
-        private HBox baseLayout;
-        private AudioComponent audioComponent_;
-
-        private AudioComponentWidget widgetIamSendingOutputTo_ = null;
-        private String name_;
-
-        private Line line_;
-        private Label nameLable_;
-
-        double mouseStartDragX_, mouseStartDragY_, widgetStartDragX_, widgetStartDragY_;
-
-
+    // used to get the input circle for filters, VF Sine waves, etc.
+    public Circle getInput_() {
+        return input_;
     }
 }
