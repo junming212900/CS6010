@@ -60,7 +60,9 @@ let people = [
     { first: "Andrew", last: "Yang" },
     { first: "Joe", last: "Biden" },
     { first: "Kris", last: "Wu" },
-    { first: "Sam", last: "Uncle" }
+    { first: "Sam", last: "Uncle" },
+    {first:"David",last:"Yang"}
+
 ]
 
 let people1 = [
