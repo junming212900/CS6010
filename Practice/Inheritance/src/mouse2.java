@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class mouse2 {
+public class mouse2 extends Mouse{
+    public static void connect(){
+        System.out.println("got contact");
+    }
 }
