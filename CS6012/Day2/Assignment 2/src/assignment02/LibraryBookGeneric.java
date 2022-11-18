@@ -21,9 +21,9 @@ public class LibraryBookGeneric<Type> extends Book {
         holder= null;
         due_date =null;
     }
-    public void checkOut(Type holder,int year,int month,int day){
+    public void checkOut(Type holder,GregorianCalendar due_date){
         this.holder = holder;
-        due_date = new GregorianCalendar(year,month,day);
+        this.due_date = due_date;
 
     }
     public boolean isCheckedOut(){return holder!=null && due_date!=null;}//

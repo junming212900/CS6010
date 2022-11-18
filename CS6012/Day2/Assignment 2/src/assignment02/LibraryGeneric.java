@@ -92,7 +92,7 @@ public class LibraryGeneric<Type> {
             }
         }
         // FILL IN -- do not return null
-        return null;
+        return LB;
     }
 
 
@@ -101,7 +101,7 @@ public class LibraryGeneric<Type> {
             if (library.get(i).getIsbn() == isbn) {// gone through library seach book by isbn
                 if (library.get(i).getDueDate() == null && library.get(i).getHolder() == null) {//  if the book don't not have  info about holder and duedate
                     GregorianCalendar due_date = new GregorianCalendar(year, month, day);// create out  the specific date and holder
-                    library.get(i).checkOut(holder, month, day, year);
+                    library.get(i).checkOut(holder, due_date);
                     return true;
                 }
                 return false;
@@ -132,14 +132,16 @@ public class LibraryGeneric<Type> {
 
 
     public boolean checkin(Type holder) {
+        boolean checkInSuccess = false;
         for (int i = 0; i < library.size(); i++) {
             if (library.get(i).getHolder() == holder) {// checkin in by holder
                 library.get(i).checkIn();// create checkin
+                checkInSuccess = true;
             }
 
         }
         // FILL IN -- do not return false unless appropriate
-        return false;
+        return checkInSuccess;
     }
 
 

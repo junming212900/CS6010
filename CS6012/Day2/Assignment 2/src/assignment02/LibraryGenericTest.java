@@ -62,26 +62,42 @@ class LibraryGenericTest {
         assertTrue(lib.checkin(patron2));
 
     }
-//    public void Comparetortest(){
-//        LibraryGeneric<String> lib = new LibraryGeneric<>();
-//        lib.add(9780374292799L, "Thomas L. Friedman", "The World is Flat");
-//        lib.add(9780330351690L, "Jon Krakauer", "Into the Wild");
-//        lib.add(9780446580342L, "David Baldacci", "Simple Genius");
-//
-//        String patron1 = "Jane Doe";
-//
-//        assertTrue(lib.checkout(9780330351690L, patron1, 1, 1, 2008));
-//        assertTrue(lib.checkout(9780374292799L, patron1, 1, 1, 2008));
-//
-//        ArrayList<LibraryBookGeneric<String>> overDudeBooks = lib.getOverdueList();
-//        assertTrue((overDudeBooks.size() == 2));
-//
-//
-//        ArrayList<LibraryBookGeneric<String>> booksOrderedbyISBN = lib.getInventoryList();
-//        assertTrue((booksOrderedbyISBN.size() == 3));
-//
-//        ArrayList<LibraryBookGeneric<String>> booksorderedbyAuthor = lib.getOrderedByAuthor();
-//        assertTrue((booksorderedbyAuthor.size() == 3));
-//    }
+    @Test
+    public void Overduetest(){
+        var lib = new LibraryGeneric<PhoneNumber>();
+        lib.add(9781843190400L,	"Jean Fanelli",	"The War Comes to Witham Street");
+        lib.add(9780330351690L, "Jon Krakauer", "Into the Wild");
+        lib.add(9780374292799L, "Thomas L. Friedman", "The World is Flat");
+        lib.add(9780446580342L, "David Baldacci", "Simple Genius");
+
+
+        PhoneNumber patron2 = new PhoneNumber("801.555.1234");
+
+        assertTrue(lib.checkout(9781843190400L, patron2, 1, 1, 2007));
+        assertTrue(lib.checkout(9780374292799L, patron2, 1, 1, 2011));
+        assertTrue(lib.checkout(9780330351690L, patron2, 1, 1, 2009));
+        assertTrue(lib.checkout(9780446580342L, patron2, 1, 1, 2010));
+
+
+        ArrayList<LibraryBookGeneric<PhoneNumber>> booksCheckedOut2 = lib.lookup(patron2);
+        var lib_ = lib.getOverdueList(7,11,2010);
+
+        assertEquals("The War Comes to Witham Street",lib_.get(0).getTitle());
+        assertEquals(9780330351690L,lib_.get(1).getIsbn());
+        assertTrue(lib.checkin(patron2));
+    }
+    @Test
+    public void InventoryListTest(){
+        LibraryGeneric<String> lib = new LibraryGeneric<>();
+
+        lib.add(9780330351690L, "Jon Krakauer", "Into the Wild");
+        lib.add(9780374292799L, "Thomas L. Friedman", "The World is Flat");
+        lib.add(9780446580342L, "David Baldacci", "Simple Genius");
+
+        var lib_ = lib.getInventoryList();
+        assertEquals(9780330351690L,lib_.get(0).getIsbn());
+        assertEquals("Jon Krakauer",lib_.get(0).getAuthor());
+        assertEquals("Simple Genius",lib_.get(2).getTitle());
+    }
 
 }
