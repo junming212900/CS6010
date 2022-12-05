@@ -8,16 +8,16 @@ import java.util.NoSuchElementException;
 public class BinarySearchSet<E> implements SortedSet, Iterator {
     private E[] data;
     private int size;
-    private int capactiy = 10;
+    private int capacity = 1;
     private Comparator<? super E> comparator = null;// <? super E > 表示包括在E在内的任何E的父类 。 < ? extend E > 表示包括在E在内的任何E的子类 // 在基础变量 写出已知的comparator
 
     public BinarySearchSet() {
-        this.data = (E[]) new Object[capactiy];//data is arraylist capacity is float
+        this.data = (E[]) new Object[capacity];//data is arraylist capacity is float
         this.size = 0;// size start 0.
     }
 
     public BinarySearchSet(Comparator<? super E> comparator) {
-        this.data = (E[]) new Object[capactiy];
+        this.data = (E[]) new Object[capacity];
         this.size = 0;
         this.comparator = comparator;
     }
@@ -30,20 +30,20 @@ public class BinarySearchSet<E> implements SortedSet, Iterator {
     @Override
     public Object first() throws NoSuchElementException {
         if (isEmpty()) throw new NoSuchElementException();
-        return 0;
+        return data[0];
     }
 
     @Override
     public Object last() throws NoSuchElementException {
         if (isEmpty()) throw new NoSuchElementException();
-        return 0;
+        return data[data.length - 1];
     }
 
     @Override
     public boolean add(Object element) {
         if (element == null || this.contains(element))
             return false;// if the element not exsit and or already in the set. return false
-        if (size == capactiy) grow();// size and capacity need grow to make in enough room for new element
+        if (size == capacity) grow();// size and capacity need grow to make in enough room for new element
         data[size++] = (E) element;// adding new element.
         bubbleSort();//sort the data array
         return true;
@@ -60,8 +60,8 @@ public class BinarySearchSet<E> implements SortedSet, Iterator {
 
     @Override
     public void clear() {// clearup all element from data. turn capacity & size to 0 reinitalize.
-        capactiy = 0;
-        data = (E[]) new Object[capactiy];
+        capacity = 0;
+        data = (E[]) new Object[capacity];
         size = 0 ;
 
     }
@@ -98,13 +98,13 @@ public class BinarySearchSet<E> implements SortedSet, Iterator {
         if (i == -1) {
             return false;
         } else {
-            capactiy--;
-            E[] newdata = (E[]) new Object[capactiy];
+            capacity--;
+            E[] newdata = (E[]) new Object[capacity];
             for (int j = 0; j < i; j++) {
                 newdata[j] = data[j];
             }
             for (int k = i + 1; k < data.length; k++) {
-                newdata[k] = data[k];
+                newdata[k-1] = data[k];
             }
             data = newdata;
             size--;
@@ -142,13 +142,14 @@ public class BinarySearchSet<E> implements SortedSet, Iterator {
     }
 
     private void grow() {
-        capactiy += 10;// capactiy will increase
-        E[] newdata = (E[]) new Object[capactiy]; //create a new array
+        capacity ++;// capacity will increase
+        E[] newdata = (E[]) new Object[capacity]; //create a new array
         for (int i = 0; i < data.length; i++) {
             newdata[i] = data[i];// put old elements to newdata array
         }
         data = newdata; // let new array replace old array.
     }
+    public E getValue(int i){ return data[i];}
 
     private void bubbleSort() {
         Comparator<? super E> comparator = this.comparator;
@@ -192,8 +193,9 @@ public class BinarySearchSet<E> implements SortedSet, Iterator {
                 i = (left+right) / 2;
                 Comparable<E> Element1 = (Comparable<E>) data[i];
                 if (element == data[i]){return i;}
-                else if (Element1.compareTo(element)>0){left = i+1;}
-                else {right = i -1;}
+                else if (Element1.compareTo(element)>0)
+                {right = i-1;}
+                else { left= i +1;}
             }
         }
 
