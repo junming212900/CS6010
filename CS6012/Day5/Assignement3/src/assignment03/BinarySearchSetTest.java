@@ -52,169 +52,188 @@ class BinarySearchSetTest {
 
     @Test
     void first() {
-        assertThrows(NoSuchElementException.class, () -> {
-            integerBinarySearchSet.first();
-        });
+        integerBinarySearchSet.add(6);
+        integerBinarySearchSet.add(5);
+        integerBinarySearchSet.add(4);
+        integerBinarySearchSet.add(3);
+        integerBinarySearchSet.add(2);
         integerBinarySearchSet.add(1);
-        assertDoesNotThrow(() -> integerBinarySearchSet.first());
-        assertEquals(integerBinarySearchSet.first(), 1);
 
+        assertEquals(integerBinarySearchSet.first(), 1);
     }
 
     @Test
     void last() {
-        assertThrows(NoSuchElementException.class, () -> {
-            integerBinarySearchSet.last();
-        });
+        integerBinarySearchSet.add(6);
+        integerBinarySearchSet.add(5);
+        integerBinarySearchSet.add(4);
+        integerBinarySearchSet.add(3);
+        integerBinarySearchSet.add(2);
         integerBinarySearchSet.add(1);
-        integerBinarySearchSet.add(8);
-        assertDoesNotThrow(() -> integerBinarySearchSet.last());
-        assertEquals(integerBinarySearchSet.last(), 8);
+        assertEquals(integerBinarySearchSet.last(), 6);
     }
 
     @Test
     void add() {
-        stringBinarySearchSet.add("test");
-        stringBinarySearchSet.add("test");
-        stringBinarySearchSet.add("test1");
-        assertEquals(stringBinarySearchSet.getValue(0), "test");
-        assertEquals(stringBinarySearchSet.getValue(1), "test1");
+        stringBinarySearchSet.add("one");
+        stringBinarySearchSet.add("two");
+        assertEquals(stringBinarySearchSet.getValue(0), "one");
+        assertEquals(stringBinarySearchSet.getValue(1), "two");
 
-        integerBinarySearchSet.add(5);
-        assertEquals(integerBinarySearchSet.getValue(0), 5);
+        integerBinarySearchSet.add(6);
+        assertEquals(integerBinarySearchSet.getValue(0), 6);
+
 
         integerBinarySearchSet.add(9);
-        integerBinarySearchSet.add(4);
-        assertEquals(integerBinarySearchSet.getValue(0), 4);
+        integerBinarySearchSet.add(2);
+        integerBinarySearchSet.add(8);
+        integerBinarySearchSet.add(1);
+        assertEquals(integerBinarySearchSet.getValue(3), 8);
 
-        comparatorIntegerSet.add(4);
+        comparatorIntegerSet.add(6);
         comparatorIntegerSet.add(1);
+        comparatorIntegerSet.add(7);
+        comparatorIntegerSet.add(10);
+        comparatorIntegerSet.add(15);
+        comparatorIntegerSet.add(14);
+        comparatorIntegerSet.add(20);
         comparatorIntegerSet.add(9);
-        assertEquals(comparatorIntegerSet.getValue(0), 9);
-        assertEquals(comparatorIntegerSet.getValue(1), 4);
+        assertEquals(comparatorIntegerSet.getValue(0), 20);
+        assertEquals(comparatorIntegerSet.getValue(3), 10);
     }
 
     @Test
     void addALL() {
         integerArrayList.add(8);
         integerArrayList.add(12);
+        integerArrayList.add(14);
+        integerArrayList.add(20);
+        integerArrayList.add(1);
+        integerArrayList.add(25);
+        integerArrayList.add(9);
+        integerArrayList.add(5);
+        integerArrayList.add(7);
         integerArrayList.add(4);
+        integerArrayList.add(13);
         integerBinarySearchSet.addAll(integerArrayList);
-        assertEquals(integerBinarySearchSet.size(), 3);
-        assertEquals(integerBinarySearchSet.first(), 4);
-        assertEquals(integerBinarySearchSet.last(), 12);
+        assertEquals(integerBinarySearchSet.size(), 11);
+        assertEquals(integerBinarySearchSet.first(), 1);
+        assertEquals(integerBinarySearchSet.last(), 25);
 
-        integerArrayList1.add(12);
-        integerArrayList1.add(4);
+        integerArrayList1.add(25);
+        integerArrayList1.add(7);
         assertFalse(integerBinarySearchSet.addAll(integerArrayList1));
 
         integerArrayList1.add(6);
         assertTrue(integerBinarySearchSet.addAll(integerArrayList1));
         integerBinarySearchSet.addAll(integerArrayList1);
-        assertEquals(integerBinarySearchSet.size(), 4);
-        assertEquals(integerBinarySearchSet.getValue(1), 6);
+        assertEquals(integerBinarySearchSet.size(), 12);
+        assertEquals(integerBinarySearchSet.getValue(1), 4);
     }
 
     @Test
     void clear() {
-        stringBinarySearchSet.add("a");
-        stringBinarySearchSet.add("b");
-        stringBinarySearchSet.add("c");
+        stringBinarySearchSet.add("one");
+        stringBinarySearchSet.add("two");
+        stringBinarySearchSet.add("three");
         assertFalse(stringBinarySearchSet.isEmpty());
         stringBinarySearchSet.clear();
         assertTrue(stringBinarySearchSet.isEmpty());
 
     }
-
+@Test
     void contains() {
-        assertFalse(stringBinarySearchSet.contains(2));
+        assertFalse(stringBinarySearchSet.contains(225));
         stringBinarySearchSet.add(1);
+        stringBinarySearchSet.add(6);
+        stringBinarySearchSet.add(3);
+        stringBinarySearchSet.add(4);
+        stringBinarySearchSet.add(5);
         assertFalse(stringBinarySearchSet.contains(2));
         assertTrue(stringBinarySearchSet.contains(1));
     }
 
     @Test
     void containsall() {
-        stringBinarySearchSet.add("a");
-        stringBinarySearchSet.add("b");
-        stringBinarySearchSet.add("c");
-        stringArrayList.add("a");
-        stringArrayList.add("c");
+        stringBinarySearchSet.add("1");
+        stringBinarySearchSet.add("2");
+        stringBinarySearchSet.add("3");
+        stringArrayList.add("1");
+        stringArrayList.add("3");
         assertTrue(stringBinarySearchSet.containsAll(stringArrayList));
-        stringArrayList.add("d");
+        stringArrayList.add("4");
         assertFalse(stringBinarySearchSet.containsAll(stringArrayList));
     }
 
     @Test
     void isEmpty() {
-        assertTrue(stringBinarySearchSet.isEmpty());
-        stringBinarySearchSet.add("hi");
-        assertFalse(stringBinarySearchSet.isEmpty());
 
+        stringBinarySearchSet.add("hello");
+        assertFalse(stringBinarySearchSet.isEmpty());
+        stringBinarySearchSet.clear();
+        assertTrue(stringBinarySearchSet.isEmpty());
     }
 
     @Test
     void remove() {
-        stringBinarySearchSet.add("a");
-        stringBinarySearchSet.add("b");
-        stringBinarySearchSet.add("c");
-        stringBinarySearchSet.remove("b");
-        assertEquals(stringBinarySearchSet.size(), 2);
-        assertFalse(stringBinarySearchSet.remove("z"));
+        stringBinarySearchSet.add("1");
+        stringBinarySearchSet.add("2");
+        stringBinarySearchSet.add("3");
+        stringBinarySearchSet.add("4");
+        stringBinarySearchSet.add("5");
+        stringBinarySearchSet.add("6");
+        stringBinarySearchSet.remove("5");
+        assertEquals(stringBinarySearchSet.size(), 5);
+        assertFalse(stringBinarySearchSet.remove("5"));
 
 
     }
 
     @Test
     void removeall() {
-        integerBinarySearchSet.add(1);
-        integerBinarySearchSet.add(2);
-        integerBinarySearchSet.add(3);
+        stringBinarySearchSet.add("1");
+        stringBinarySearchSet.add("2");
+        stringBinarySearchSet.add("3");
 
-        integerArrayList.add(1);
-        integerArrayList.add(3);
+        stringArrayList.add("1");
+        stringArrayList.add("3");
 
-        assertTrue(integerBinarySearchSet.removeAll(integerArrayList));
-        assertEquals(integerBinarySearchSet.size(), 1);
-        integerArrayList.add(9);
+        assertTrue(stringBinarySearchSet.removeAll(stringArrayList));
+        assertEquals(stringBinarySearchSet.size(), 1);
+        stringArrayList.add("9");
 
         assertFalse(integerBinarySearchSet.removeAll(integerArrayList));
 
-        stringBinarySearchSet.add("a");
-        stringBinarySearchSet.add("b");
-        stringBinarySearchSet.add("c");
-        stringArrayList.add("c");
-        stringArrayList.add("d");
-        stringBinarySearchSet.removeAll(stringArrayList);
-        assertEquals(stringBinarySearchSet.size(), 2);
-        assertEquals(stringBinarySearchSet.getValue(1), "b");
+        integerBinarySearchSet.add(1);
+        integerBinarySearchSet.add(2);
+        integerBinarySearchSet.add(3);
+        integerBinarySearchSet.add(4);
+        integerBinarySearchSet.add(5);
+        integerArrayList.add(4);
+        integerArrayList.add(5);
+        integerBinarySearchSet.removeAll(integerArrayList);
+        assertEquals(integerBinarySearchSet.size(), 3);
+        assertEquals(integerBinarySearchSet.getValue(1), 2);
 
     }
 
-    @Test
-    void size() {
-        assertEquals(stringBinarySearchSet.size(), 0);
-        stringBinarySearchSet.add("a");
-        stringBinarySearchSet.add("b");
-        stringBinarySearchSet.add("c");
-        assertEquals(stringBinarySearchSet.size(), 3);
-    }
+
 
     @Test
     void toArray() {
-        stringBinarySearchSet.add("a");
-        stringBinarySearchSet.add("b");
-        stringBinarySearchSet.add("c");
-        assertEquals(stringBinarySearchSet.toArray()[1], "b");
+        integerBinarySearchSet.add(1);
+        integerBinarySearchSet.add(2);
+        integerBinarySearchSet.add(3);
+        assertEquals(integerBinarySearchSet.toArray()[1], 2);
     }
 
     @Test
     void iterator() {
-        stringBinarySearchSet.add("a");
-        stringBinarySearchSet.add("b");
-        stringBinarySearchSet.add("c");
-        Iterator<String> stringIterator = stringBinarySearchSet.iterator();
-        assertEquals(stringIterator.next(), "a");
+        integerBinarySearchSet.add(1);
+        integerBinarySearchSet.add(2);
+        integerBinarySearchSet.add(3);
+        Iterator<Integer> integerIterator = integerBinarySearchSet.iterator();
+        assertEquals(integerIterator.next(), 1);
     }
 
     @Test
