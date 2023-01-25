@@ -1,0 +1,55 @@
+#include <cstdio>
+
+template <typename T > T add( T a, T y)
+{
+    return a + y;
+}
+int main() {
+
+    printf("%d", add(3,1));
+}
+_______________________
+
+.LC0:
+        .string "%d"
+main:
+        push    rbp // start register rbp 
+        mov     rbp, rsp // move register rsp into rbp 
+        mov     esi, 1 //move 1 into esi
+        mov     edi, 3 //move 3 into edi
+        call    int add<int>(int, int) // starting use function "add"
+        mov     esi, eax
+        mov     edi, OFFSET FLAT:.LC0 // move OFFSET FLAT:.LC0 into edi
+        mov     eax, 0 //move 0 into eax 
+        call    printf// starting use printf
+        mov     eax, 0//move 0 into eax 
+        pop     rbp// pop out rbp from Stack/ close rbp
+        ret//terminated the above function 
+int add<int>(int, int):
+        push    rbp // star using the register rbp
+        mov     rbp, rsp // move rsp into rbo
+        mov     DWORD PTR [rbp-4], edi //move edi into  DWORD PTR [rbp-4]
+        mov     DWORD PTR [rbp-8], esi // move esi into DWORD PTR [rbp-8]
+        mov     edx, DWORD PTR [rbp-4] // move DWORD PTR [rbp-4] into edx
+        mov     eax, DWORD PTR [rbp-8]// move DWORD PTR [rbp-8] into eax 
+        add     eax, edx // add edx and eax togather into one regester eax
+        pop     rbp // pop out rbp from Stack/ close rbp 
+        ret //terminated the above function 
+
+
+
+
+
+.LC0:
+        .string "%d"
+main:
+        sub     rsp, 8 // rsp = rsp -8
+        mov     esi, 4 // mov 4 into esi
+        mov     edi, OFFSET FLAT:.LC0 // move OFFSET FLAT:.LC0 into edi
+        xor     eax, eax //eax = 0
+        call    printf // start using printf
+        xor     eax, eax //eax = 0
+        add     rsp, 8 //rsp = rsp +8
+        ret //terminated the above function 
+Q5:Because the assembly language is continuously optimized from -O0 to -O3, some options can be blocked or added on this basis, which significantly reduces the difficulty of use.
+

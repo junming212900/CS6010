@@ -1,0 +1,30 @@
+CXX=g++
+CFLAGS= -o
+CXXSOURCE= Caps.cpp Clothing.cpp main.cpp Pants.cpp
+HEADERS=Caps.h Clothing.h Pants.h
+build: cloth
+#cloth is create exe file
+cloth:Caps.o Clothing.o main.o Pants.o
+	g++ Caps.o Clothing.o main.o Pants.o -o cloth
+#Capss Create Caps.o
+Caps.o:Caps.cpp Caps.h
+	g++ Caps.cpp -c
+	# Create Clothing.o
+Clothing.o:Clothing.cpp Clothing.h
+	g++ Clothing.cpp -c
+	# Create Pants.o
+Pants.o:Pants.cpp Pants.h
+	g++ Pants.cpp -c
+	# Create main.o
+main.o:main.cpp
+	g++ main.cpp -c
+# clean is remove all the .o file
+.PHONY:clean
+clean:
+	rm -f Caps.o Clothing.o main.o Pants.o cloth
+printM:
+	echo $(CXX) $(CFLAGS) $(CXXSOURCE) $(HEADERS)
+object:Caps.o Clothing.o main.o Pants.o
+	$(CXX) $(CXXSOURCE) -c
+
+

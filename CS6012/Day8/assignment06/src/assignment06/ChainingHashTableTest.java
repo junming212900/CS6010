@@ -17,6 +17,7 @@ ChainingHashTable badTable;
 ChainingHashTable mediocreTable;
 ChainingHashTable goodTable;
 ArrayList<String> list;
+
 ArrayList<String> wordlist;
 @BeforeEach
 
@@ -36,73 +37,55 @@ ArrayList<String> wordlist;
     wordlist = null;
 }
 @Test
-    void add(){
+    void hello (){
     badTable.add("hi");
-    assertEquals(badTable.size(),1);
+    badTable.add("nihao");
+    badTable.add("hola");
+    badTable.add("bonjour");
+    badTable.add("hallo");
+    assertEquals(badTable.size(),5);
     assertTrue(badTable.remove("hi"));
-}
-@Test
-    void addAll() {
-    list.add("a");
-    list.add("bc");
+    assertEquals(badTable.size(),4);
+    list.add("1");
+    list.add("2");
+    list.add("3");
+    list.add("4");
     badTable.addAll(list);
-    assertEquals(badTable.size(), 2);
-    assertTrue(badTable.removeAll(list));
-}
-
-@Test
-    void clear(){
-    goodTable.add("hah");
-    goodTable.add("ded");
-    assertEquals(goodTable.size(),2);
-    goodTable.clear();
-    assertEquals(goodTable.size(),0);
-}
-@Test
-    void contains(){
-    assertFalse(mediocreTable.contains("what"));
-    mediocreTable.add("dad");
-    mediocreTable.add("sfdds");
-    assertTrue(mediocreTable.contains("dad"));
-    assertFalse(mediocreTable.contains("list"));
-
-}
-@Test
-    void containsAll(){
-    list.add("dasfa");
-    list.add("sfaf");
-    list.add("asd");
-    mediocreTable.addAll(list);
-    assertTrue(mediocreTable.contains("asd"));
-}
-@Test
-    void isEmpty(){
-    assertTrue(badTable.isEmpty());
-    badTable.add("ty");
-    assertFalse(badTable.isEmpty());
+    assertEquals(badTable.size(),8);
     badTable.clear();
     assertTrue(badTable.isEmpty());
 
 }
 
+
 @Test
-    void remove(){
-    goodTable.add("d");
-    assertTrue(goodTable.remove("d"));
-    assertFalse(goodTable.remove("ddd"));
-    assertEquals(goodTable.size(),0);
-}
-@Test
-    void removeall(){
-    list.add("ds");
-    list.add("hello");
-    mediocreTable.add("v");
-    mediocreTable.add("b");
-    mediocreTable.add("n");
+    void worldcupcontains(){
+    mediocreTable.add("Japan");
+    mediocreTable.add("holland");
+    mediocreTable.add("France");
+    mediocreTable.add("Argentina");
+    mediocreTable.add("Morcco");
+    list.add("brazil");
+    list.add("Portugal");
+    list.add("England");
+    assertTrue(mediocreTable.contains("Japan"));
+    assertTrue(mediocreTable.contains("France"));
+    assertEquals(mediocreTable.size(),5);
+    mediocreTable.addAll(list);
+    assertEquals(mediocreTable.size(),8);
+    assertTrue(mediocreTable.contains("brazil"));
+    assertTrue(mediocreTable.contains("England"));
+    assertFalse(mediocreTable.contains("China"));
+    assertTrue(mediocreTable.remove("Japan"));
+    assertTrue(mediocreTable.remove("holland"));
+    assertEquals(mediocreTable.size(),6);
     assertTrue(mediocreTable.removeAll(list));
-    assertTrue(mediocreTable.contains("b"));
+    assertEquals(mediocreTable.size(),3);
+    mediocreTable.clear();
+    assertEquals(mediocreTable.size(),0);
 
 }
+
 @Test
     void testcollision(){
     badTable.addAll(wordlist);
@@ -110,7 +93,7 @@ ArrayList<String> wordlist;
     goodTable.addAll(wordlist);
     System.out.println("for bad functor,# of collision is : "+ badTable.getCollisions());
     System.out.println("for mediocre functor,# of collision is : "+ mediocreTable.getCollisions());
-    System.out.println("for good  functor,# of collision is : "+ goodTable.getCollisions());
+    System.out.println("for good functor,# of collision is : "+ goodTable.getCollisions());
 }
 private ArrayList<String> readFromFile(String filename){
     ArrayList<String> word = new ArrayList<>();
@@ -119,7 +102,7 @@ private ArrayList<String> readFromFile(String filename){
         while(fileInput.hasNext()){
             String s = fileInput.next();
             if(!s.equals(""))word.add(s.toLowerCase());
-            if(word.size() == 4000) break  ;
+            if(word.size() == 5000) break  ;
         }
     }catch (FileNotFoundException e){
         System.err.println("File" + filename + "can not be found.");

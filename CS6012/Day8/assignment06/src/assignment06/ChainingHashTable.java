@@ -7,7 +7,7 @@ import java.util.Iterator;
 public class ChainingHashTable implements Set<String>{
 
     private LinkedList<String>[] storage;
-    private HashFunctor functor;
+    private HashFunctor functor;//to calculate te hash value
     private int capacity;
     private int size;
     private int collisions;
@@ -22,17 +22,17 @@ public class ChainingHashTable implements Set<String>{
     }
     @Override
     public boolean add(String item) {
-        int hashIndex = functor.hash(item)%capacity;
-        if(storage[hashIndex] == null){
+        int hashIndex = functor.hash(item)%capacity;// firgue out the location of each element has colision
+        if(storage[hashIndex] == null){// create a new Linkedlist and add the item into the linked list
             LinkedList<String> list = new LinkedList<>();
             list.add(item);
             storage[hashIndex] = list;
             size++;
             return true;
 
-        }else if(storage[hashIndex].contains(item)){
+        }else if(storage[hashIndex].contains(item)){// linkedlist item already exist
             return false;
-        }else{
+        }else{// add item into exist linked list
             storage[hashIndex].add(item);
             size++;
             collisions++;
@@ -42,7 +42,7 @@ public class ChainingHashTable implements Set<String>{
     }
 
     @Override
-    public boolean addAll(Collection<? extends String> items) {
+    public boolean addAll(Collection<? extends String> items) {//using iterator to add all items from list to other array
         Iterator<? extends String> iterator = items.iterator();
         int OrignalSize = size;
         while( iterator.hasNext())add(iterator.next());
@@ -56,14 +56,14 @@ public class ChainingHashTable implements Set<String>{
     }
 
     @Override
-    public boolean contains(String item) {
+    public boolean contains(String item) {// check the item either in the array
         int hashIndex = functor.hash(item)% capacity;
         return storage[hashIndex] != null&& storage[hashIndex].contains(item);
 
     }
 
     @Override
-    public boolean containsAll(Collection<? extends String> items) {
+    public boolean containsAll(Collection<? extends String> items) {// check each item inthe list or array
         for(String item: items) if (!contains(item)) return false;
         return true;
     }
@@ -74,21 +74,21 @@ public class ChainingHashTable implements Set<String>{
     }
 
     @Override
-    public boolean remove(String item) {
+    public boolean remove(String item) {// find out the location
         int hashIndex = functor.hash(item)%capacity;
         if(storage[hashIndex]== null || !storage[hashIndex].contains(item)){
-            return false;
-        }else{
-            storage[hashIndex].remove(item);
+            return false;// if item is not in the list ,return false
+        }else{// if the item is in th array
+            storage[hashIndex].remove(item);// remove the item
             size--;
-            if(storage[hashIndex].isEmpty()) storage[hashIndex] = null;
+//
             return true;
         }
     }
 
 
     @Override
-    public boolean removeAll(Collection<? extends String> items) {
+    public boolean removeAll(Collection<? extends String> items) {// create iterator to remove one by one item in list from array
         Iterator< ? extends String > iterator = items.iterator();
         int OriginalSize = size;
         while ( iterator.hasNext()) remove(iterator.next());

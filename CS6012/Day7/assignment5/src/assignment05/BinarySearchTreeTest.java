@@ -105,95 +105,143 @@ assertThrows(NoSuchElementException.class,()->{stringBinarySearchTree.first();})
     }
 @Test
     void contains(){
-        assertFalse(integerBinarySeachThree.contains(1));
-        integerBinarySeachThree.add(1);
-        assertTrue(integerBinarySeachThree.contains(1));
+    integerBinarySeachThree.add(1);
+    integerBinarySeachThree.add(2);
+    integerBinarySeachThree.add(3);
+    integerBinarySeachThree.add(4);
+    integerBinarySeachThree.add(5);
+    integerBinarySeachThree.add(6);
+    integerBinarySeachThree.add(7);
+    integerBinarySeachThree.add(8);
+    integerBinarySeachThree.add(9);
+    integerBinarySeachThree.add(10);
+        assertTrue(integerBinarySeachThree.contains(10));
         assertFalse(stringBinarySearchTree.contains("a"));
-        stringBinarySearchTree.add("a");
+    stringBinarySearchTree.add("a");
+    stringBinarySearchTree.add("b");
+    stringBinarySearchTree.add("c");
+    stringBinarySearchTree.add("d");
+    stringBinarySearchTree.add("e");
+    stringBinarySearchTree.add("f");
+    stringBinarySearchTree.add("g");
         assertTrue(stringBinarySearchTree.contains("a"));
-        stringBinarySearchTree.add("b");
         assertTrue(stringBinarySearchTree.contains("b"));
-        stringBinarySearchTree.add("ab");
-        assertTrue(stringBinarySearchTree.contains("ab"));
-        assertFalse(stringBinarySearchTree.contains("c"));
+        stringBinarySearchTree.add("Argentina World Cup Champions 2022");
+        assertTrue(stringBinarySearchTree.contains("Argentina World Cup Champions 2022"));
+        assertFalse(stringBinarySearchTree.contains("Messi world cup winner 2022"));
 }
 @Test
     void containsall(){
 
-    integerBinarySeachThree.add(2);
     integerBinarySeachThree.add(1);
+    integerBinarySeachThree.add(2);
     integerBinarySeachThree.add(3);
+    integerBinarySeachThree.add(4);
+    integerBinarySeachThree.add(5);
+    integerBinarySeachThree.add(6);
+    integerBinarySeachThree.add(7);
+    integerBinarySeachThree.add(8);
+    integerBinarySeachThree.add(9);
+    integerBinarySeachThree.add(10);
     integerArrayList.add(2);
     assertTrue(integerBinarySeachThree.containsAll(integerArrayList));
     integerArrayList.add(3);
     assertTrue(integerBinarySeachThree.containsAll(integerArrayList));
-    integerArrayList.add(4);
+    integerArrayList.add(65);
     assertFalse(integerBinarySeachThree.containsAll(integerArrayList));
 }
 @Test
     void first(){
-    integerBinarySeachThree.add(2);
     integerBinarySeachThree.add(1);
+    integerBinarySeachThree.add(2);
     integerBinarySeachThree.add(3);
+    integerBinarySeachThree.add(4);
+    integerBinarySeachThree.add(5);
+    integerBinarySeachThree.add(6);
+    integerBinarySeachThree.add(7);
+    integerBinarySeachThree.add(8);
+    integerBinarySeachThree.add(9);
+    integerBinarySeachThree.add(10);
     assertEquals(integerBinarySeachThree.first(),1);
 }
 @Test
     void isEmpty(){
-        assertTrue(stringBinarySearchTree.isEmpty());
+    stringBinarySearchTree.add("a");
+    stringBinarySearchTree.add("b");
+    stringBinarySearchTree.add("c");
+    stringBinarySearchTree.add("d");
+    stringBinarySearchTree.add("e");
+    stringBinarySearchTree.add("f");
+    stringBinarySearchTree.add("g");
         stringBinarySearchTree.add("k");
         assertFalse(stringBinarySearchTree.isEmpty());
+        stringBinarySearchTree.clear();
+    assertTrue(stringBinarySearchTree.isEmpty());
 }
 @Test
     void last(){
-    integerBinarySeachThree.add(2);
     integerBinarySeachThree.add(1);
+    integerBinarySeachThree.add(2);
     integerBinarySeachThree.add(3);
-    assertEquals(integerBinarySeachThree.last(),3);
+    integerBinarySeachThree.add(4);
+    integerBinarySeachThree.add(5);
+    integerBinarySeachThree.add(6);
+    integerBinarySeachThree.add(7);
+    integerBinarySeachThree.add(8);
+    integerBinarySeachThree.add(9);
+    integerBinarySeachThree.add(10);
+    assertEquals(integerBinarySeachThree.last(),10);
 }
 @Test
     void remove(){
     stringBinarySearchTree.add("a");
-    assertEquals(stringBinarySearchTree.size(),1);
+    stringBinarySearchTree.add("b");
+    stringBinarySearchTree.add("c");
+    stringBinarySearchTree.add("d");
+    stringBinarySearchTree.add("e");
+    stringBinarySearchTree.add("f");
+    stringBinarySearchTree.add("g");
+    assertEquals(stringBinarySearchTree.size(),7);
     stringBinarySearchTree.remove("a");
-    assertEquals(stringBinarySearchTree.size(),0);
-    integerBinarySeachThree.add(4);
-    integerBinarySeachThree.add(2);
-    integerBinarySeachThree.add(1);
-    integerBinarySeachThree.add(3);
-    integerBinarySeachThree.add(6);
-    integerBinarySeachThree.add(5);
+    assertEquals(stringBinarySearchTree.size(),6);
+    integerBinarySeachThree.add(15);
     integerBinarySeachThree.add(7);
+    integerBinarySeachThree.add(1);
+    integerBinarySeachThree.add(8);
+    integerBinarySeachThree.add(22);
+    integerBinarySeachThree.add(19);
+    integerBinarySeachThree.add(30);
     /*                  6
 
      */
 
-    integerBinarySeachThree.remove(6);
-    assertEquals(integerBinarySeachThree.getvalue(integerBinarySeachThree.getright(integerBinarySeachThree.getRoot())),7);
-    integerBinarySeachThree.remove(2);
-    assertEquals(integerBinarySeachThree.getvalue(integerBinarySeachThree.getleft(integerBinarySeachThree.getRoot())),3);
+    integerBinarySeachThree.remove(22);
+    assertEquals(integerBinarySeachThree.getvalue(integerBinarySeachThree.getright(integerBinarySeachThree.getRoot())),30);
+    integerBinarySeachThree.remove(7);
+    assertEquals(integerBinarySeachThree.getvalue(integerBinarySeachThree.getleft(integerBinarySeachThree.getRoot())),8);
     integerBinarySeachThree.clear();
     assertTrue(integerBinarySeachThree.isEmpty());
 
-    integerBinarySeachThree.add(4);
-    integerBinarySeachThree.add(2);
-    integerBinarySeachThree.add(1);
-    integerBinarySeachThree.add(3);
-    integerBinarySeachThree.add(6);
-    integerBinarySeachThree.add(5);
+    integerBinarySeachThree.add(15);
     integerBinarySeachThree.add(7);
+    integerBinarySeachThree.add(1);
+    integerBinarySeachThree.add(8);
+    integerBinarySeachThree.add(22);
+    integerBinarySeachThree.add(19);
+    integerBinarySeachThree.add(30);
 
-    integerBinarySeachThree.remove(4);
-    assertEquals(integerBinarySeachThree.getvalue(integerBinarySeachThree.getRoot()),5);
+    integerBinarySeachThree.remove(15);
+    assertEquals(integerBinarySeachThree.getvalue(integerBinarySeachThree.getRoot()),19);
 }
 @Test
     void removall(){
-    integerBinarySeachThree.add(4);
-    integerBinarySeachThree.add(2);
-    integerBinarySeachThree.add(1);
-    integerBinarySeachThree.add(3);
-    integerBinarySeachThree.add(6);
-    integerBinarySeachThree.add(5);
+    integerBinarySeachThree.add(15);
     integerBinarySeachThree.add(7);
+    integerBinarySeachThree.add(1);
+    integerBinarySeachThree.add(8);
+    integerBinarySeachThree.add(22);
+    integerBinarySeachThree.add(19);
+    integerBinarySeachThree.add(30);
     assertFalse(integerBinarySeachThree.removeAll(integerArrayList));
     integerArrayList.add(1);
     assertTrue(integerBinarySeachThree.removeAll(integerArrayList));
