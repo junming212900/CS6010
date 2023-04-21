@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-9b278b385e199cdb1986.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "MSDscript",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "MSDscript::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MSDscript-Debug-473e318b0f7867ec2e16.json",
+					"name" : "MSDscript",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MSDscript_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MSDscript_autogen-Debug-14bacb0831a5cad19ad1.json",
+					"name" : "MSDscript_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MSDscript_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MSDscript_autogen_timestamp_deps-Debug-4912eae8d52b412ccba6.json",
+					"name" : "MSDscript_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/junmingjin/MSD/CS6015/QT MSD/build-MSDscript-Qt_6_5_0_for_macOS-Debug",
+		"source" : "/Users/junmingjin/MSD/CS6015/QT MSD/MSDscript"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

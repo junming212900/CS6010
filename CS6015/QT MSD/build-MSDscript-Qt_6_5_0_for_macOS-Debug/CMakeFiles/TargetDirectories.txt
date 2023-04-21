@@ -1,0 +1,9 @@
+/Users/junmingjin/MSD/CS6015/QT MSD/build-MSDscript-Qt_6_5_0_for_macOS-Debug/CMakeFiles/MSDscript.dir
+/Users/junmingjin/MSD/CS6015/QT MSD/build-MSDscript-Qt_6_5_0_for_macOS-Debug/CMakeFiles/edit_cache.dir
+/Users/junmingjin/MSD/CS6015/QT MSD/build-MSDscript-Qt_6_5_0_for_macOS-Debug/CMakeFiles/rebuild_cache.dir
+/Users/junmingjin/MSD/CS6015/QT MSD/build-MSDscript-Qt_6_5_0_for_macOS-Debug/CMakeFiles/list_install_components.dir
+/Users/junmingjin/MSD/CS6015/QT MSD/build-MSDscript-Qt_6_5_0_for_macOS-Debug/CMakeFiles/install.dir
+/Users/junmingjin/MSD/CS6015/QT MSD/build-MSDscript-Qt_6_5_0_for_macOS-Debug/CMakeFiles/install/local.dir
+/Users/junmingjin/MSD/CS6015/QT MSD/build-MSDscript-Qt_6_5_0_for_macOS-Debug/CMakeFiles/install/strip.dir
+/Users/junmingjin/MSD/CS6015/QT MSD/build-MSDscript-Qt_6_5_0_for_macOS-Debug/CMakeFiles/MSDscript_autogen_timestamp_deps.dir
+/Users/junmingjin/MSD/CS6015/QT MSD/build-MSDscript-Qt_6_5_0_for_macOS-Debug/CMakeFiles/MSDscript_autogen.dir

@@ -1,0 +1,9 @@
+# ninja log v5
+32	1473	1681365060450376119	CMakeFiles/untitled.dir/mainwidget.cpp.o	3b2f5a3e1e5e3535
+345	1614	1681364947989368848	CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.o	90ecf7a77d81ea0a
+1473	1610	1681365060591955913	untitled.app/Contents/MacOS/untitled	7f2c9bf7a117eb00
+5	30	1681365059014089667	/Users/junmingjin/MSD/CS6015/QT/build-untitled-Qt_6_5_0_for_macOS-Debug/untitled_autogen/timestamp	ec420b16a6b40341
+345	1584	1681364947960197673	CMakeFiles/untitled.dir/main.cpp.o	6c1797b04838a20b
+5	30	1681365059014089667	/Users/junmingjin/MSD/CS6015/QT/build-untitled-Qt_6_5_0_for_macOS-Debug/untitled_autogen/mocs_compilation.cpp	ec420b16a6b40341
+5	30	1681365059014089667	untitled_autogen/mocs_compilation.cpp	ec420b16a6b40341
+5	30	1681365059014089667	untitled_autogen/timestamp	ec420b16a6b40341

@@ -1,0 +1,580 @@
+Script started on Fri Jan 27 14:05:21 2023
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004hlls[?2004l
+Department.cpp			output.txt
+Department.h			program
+employeeClass.cpp		programmerClass.cpp
+employeeClass.h			programmerClass.h
+junmingjin.txt			softwarearchitectClass.cpp
+main.cpp			softwarearchitectClass.h
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004hlsmake test      m  [7m./program > output.txt[27m[22D[27m.[27m/[27mp[27mr[27mo[27mg[27mr[27ma[27mm[27m [27m>[27m [27mo[27mu[27mt[27mp[27mu[27mt[27m.[27mt[27mx[27mt[1C[1C[1C   docx[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004hlls -I i L l[?2004l
+total 440
+-rwxrwxrwx@ 1 junmingjin  staff    4064 Oct 11  2018 Department.cpp
+-rwxrwxrwx@ 1 junmingjin  staff    1486 Oct  8  2018 Department.h
+-rwxrwxrwx@ 1 junmingjin  staff     998 Oct 11  2018 employeeClass.cpp
+-rwxrwxrwx@ 1 junmingjin  staff     625 Oct 11  2018 employeeClass.h
+-rw-r--r--  1 junmingjin  staff    1309 Jan 27 14:26 junmingjin.txt
+-rwxrwxrwx@ 1 junmingjin  staff    4996 Oct  8  2018 main.cpp
+-rw-r--r--@ 1 junmingjin  staff    2069 Jan 27 14:07 output.docx
+-rw-r--r--@ 1 junmingjin  staff    2069 Jan 27 14:04 output.txt
+-rwxr-xr-x  1 junmingjin  staff  171876 Jan 27 14:03 program
+-rwxrwxrwx@ 1 junmingjin  staff     955 Mar 15  2018 programmerClass.cpp
+-rwxrwxrwx@ 1 junmingjin  staff     595 Mar 15  2018 programmerClass.h
+-rwxrwxrwx@ 1 junmingjin  staff    1072 Mar 15  2018 softwarearchitectClass.cpp
+-rwxrwxrwx@ 1 junmingjin  staff     633 Mar 15  2018 softwarearchitectClass.h
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004hls -l./program > output.docx[23Dls                     [21Dmake test[9Dls       ./program > output.docx[23Dls -l                  [18D     cclang++ -g -O0 *.cpp - o program[?2004l
+[1mDepartment.cpp:143:47: [0m[0;1;35mwarning: [0m[1mif statement has empty body [-Wempty-body][0m
+                if (E.getID() == Programmers->at(i).getID());
+[0;1;32m                                                            ^
+[0m[1mDepartment.cpp:143:47: [0m[0;1;30mnote: [0mput the semicolon on a separate line to silence this warning[0m
+[1mDepartment.cpp:162:10: [0m[0;1;35mwarning: [0m[1mexpression result unused [-Wunused-value][0m
+    for (i; i < Programmers->size(); i++)
+[0;1;32m         ^
+[0m[1mDepartment.cpp:170:10: [0m[0;1;35mwarning: [0m[1mexpression result unused [-Wunused-value][0m
+    for (i; i < SoftwareArchitects->size(); i++)
+[0;1;32m         ^
+[0m3 warnings generated.
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004hclang++ -g -O0 *.cpp -o program[31D                               [31Dllal ls -a;[?2004l
+.				main.cpp
+..				output.docx
+.idea				output.txt
+.vscode				program
+Department.cpp			program.dSYM
+Department.h			programmerClass.cpp
+employeeClass.cpp		programmerClass.h
+employeeClass.h			softwarearchitectClass.cpp
+junmingjin.txt			softwarearchitectClass.h
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004hlls -al  -  \ /   [?2004l
+total 704
+drwx------@ 18 junmingjin  staff     576 Jan 27 14:29 .
+drwxr-xr-x   4 junmingjin  staff     128 Jan 27 13:59 ..
+drwxr-xr-x   7 junmingjin  staff     224 Jan 27 14:22 .idea
+drwxr-xr-x   4 junmingjin  staff     128 Jan 26 21:28 .vscode
+-rwxrwxrwx@  1 junmingjin  staff    4064 Oct 11  2018 Department.cpp
+-rwxrwxrwx@  1 junmingjin  staff    1486 Oct  8  2018 Department.h
+-rwxrwxrwx@  1 junmingjin  staff     998 Oct 11  2018 employeeClass.cpp
+-rwxrwxrwx@  1 junmingjin  staff     625 Oct 11  2018 employeeClass.h
+-rw-r--r--   1 junmingjin  staff    4340 Jan 27 14:29 junmingjin.txt
+-rwxrwxrwx@  1 junmingjin  staff    4996 Oct  8  2018 main.cpp
+-rw-r--r--@  1 junmingjin  staff    2069 Jan 27 14:07 output.docx
+-rw-r--r--@  1 junmingjin  staff    2069 Jan 27 14:04 output.txt
+-rwxr-xr-x   1 junmingjin  staff  302852 Jan 27 14:29 program
+drwxr-xr-x   3 junmingjin  staff      96 Jan 27 14:29 program.dSYM
+-rwxrwxrwx@  1 junmingjin  staff     955 Mar 15  2018 programmerClass.cpp
+-rwxrwxrwx@  1 junmingjin  staff     595 Mar 15  2018 programmerClass.h
+-rwxrwxrwx@  1 junmingjin  staff    1072 Mar 15  2018 softwarearchitectClass.cpp
+-rwxrwxrwx@  1 junmingjin  staff     633 Mar 15  2018 softwarearchitectClass.h
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004hls -al;clang++ -g -O0 *.cpp -o program[31Dls -l                          [26D./program > output.docx[23Dls                     [21Dmake test      m  [7m./program > output.txt[27m[22D[27m.[27m/[27mp[27mr[27mo[27mg[27mr[27ma[27mm[27m [27m>[27m [27mo[27mu[27mt[27mp[27mu[27mt[27m.[27mt[27mx[27mt[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004h../program[?2004l
+  Here is the List of all the Staff in the R&D Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   0                           3000.00      2015
+
+   Mary   0                           5500.00      2010
+
+   Marc   0                           8000.00      2007
+
+   Mike   0                           2500.00      2014
+
+  Julie   0                           2150.00      2013
+
+ Albert   0                           2300.00      2015
+
+   John   0                           4899.00      2011
+
+ Connor   0                           1900.00      2017
+  Here is the List of all the Staff in the IT Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+ Removing Mike from the company: Succeeded
+ -------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Mary   0                           5500.00      2010
+
+  Julie   0                           2150.00      2013
+
+ Connor   0                           1900.00      2017
+
+  Here is the List of all the Programmers who know C++ in the R&D Department: 
+  ---------------------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+  Julie   0                           2150.00      2013      Mary         5         C++
+
+ Listing All Project IDs: 
+-------------------------
+The Highest R&D Employee Salary is: 5500.00
+The Highest R&D Programmer Salary is: 2150.00
+The Highest R&D Software Architect Salary is: 1900.00
+
+The Average R&D Employee Salary is: 5500
+The Average R&D Programmer Salary is: 2150
+The Average R&D Software Architect Salary is: 1900
+
+The Average IT Employee Salary is: 0
+The Average IT Programmer Salary is: 1700
+The Average IT Software Architect Salary is: 0
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004h../program[?2004l
+  Here is the List of all the Staff in the R&D Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   0                           3000.00      2015
+
+   Mary   0                           5500.00      2010
+
+   Marc   0                           8000.00      2007
+
+   Mike   0                           2500.00      2014
+
+  Julie   0                           2150.00      2013
+
+ Albert   0                           2300.00      2015
+
+   John   0                           4899.00      2011
+
+ Connor   0                           1900.00      2017
+  Here is the List of all the Staff in the IT Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+ Removing Mike from the company: Succeeded
+ -------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Mary   0                           5500.00      2010
+
+  Julie   0                           2150.00      2013
+
+ Connor   0                           1900.00      2017
+
+  Here is the List of all the Programmers who know C++ in the R&D Department: 
+  ---------------------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+  Julie   0                           2150.00      2013      Mary         5         C++
+
+ Listing All Project IDs: 
+-------------------------
+The Highest R&D Employee Salary is: 5500.00
+The Highest R&D Programmer Salary is: 2150.00
+The Highest R&D Software Architect Salary is: 1900.00
+
+The Average R&D Employee Salary is: 5500
+The Average R&D Programmer Salary is: 2150
+The Average R&D Software Architect Salary is: 1900
+
+The Average IT Employee Salary is: 0
+The Average IT Programmer Salary is: 1700
+The Average IT Software Architect Salary is: 0
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004h./program       .  ./program > output.txt[22Dls -al                [16D;clang++ -g -O0 *.cpp -o program[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004hclang++ -g -O0 *.cpp -o program[31D./program                      [22D[?2004l
+  Here is the List of all the Staff in the R&D Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1                           3000.00      2015
+
+   Mary   2                           5500.00      2010
+
+   Marc   3                           8000.00      2007
+
+   Mike  11                           2500.00      2014
+
+  Julie  12                           2150.00      2013
+
+ Albert  13                           2300.00      2015
+
+   John  21                           4899.00      2011
+
+ Connor  24                           1900.00      2017
+  Here is the List of all the Staff in the IT Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+ Removing Mike from the company: Succeeded
+ -------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1                           3000.00      2015
+
+   Mary   2                           5500.00      2010
+
+   Marc   3                           8000.00      2007
+
+  Julie  12                           2150.00      2013
+
+ Albert  13                           2300.00      2015
+
+   John  21                           4899.00      2011
+
+ Connor  24                           1900.00      2017
+
+  Here is the List of all the Programmers who know C++ in the R&D Department: 
+  ---------------------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+  Julie  12                           2150.00      2013      Mary         5         C++
+
+ Albert  13                           2300.00      2015      Mary         9         C++
+
+ Listing All Project IDs:  5 9 6 8
+-------------------------
+The Highest R&D Employee Salary is: 8000.00
+The Highest R&D Programmer Salary is: 2300.00
+The Highest R&D Software Architect Salary is: 4899.00
+
+The Average R&D Employee Salary is: 5500
+The Average R&D Programmer Salary is: 2225
+The Average R&D Software Architect Salary is: 3399
+
+The Average IT Employee Salary is: 0
+The Average IT Programmer Salary is: 1700
+The Average IT Software Architect Salary is: 0
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004h./program[9Dclang++ -g -O0 *.cpp -o program[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004hclang++ -g -O0 *.cpp -o program[31D./program                      [22D[?2004l
+  Here is the List of all the Staff in the R&D Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+   Mike  11        Multimedia Prog.   2500.00      2014
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+  Here is the List of all the Staff in the IT Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+ Removing Mike from the company: Succeeded
+ -------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+
+  Here is the List of all the Programmers who know C++ in the R&D Department: 
+  ---------------------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+ Listing All Project IDs:  5 9 6 8
+-------------------------
+The Highest R&D Employee Salary is: 8000.00
+The Highest R&D Programmer Salary is: 2300.00
+The Highest R&D Software Architect Salary is: 4899.00
+
+The Average R&D Employee Salary is: 5500
+The Average R&D Programmer Salary is: 2225
+The Average R&D Software Architect Salary is: 3399
+
+The Average IT Employee Salary is: 0
+The Average IT Programmer Salary is: 1700
+The Average IT Software Architect Salary is: 0
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004h./program[9Dclang++ -g -O0 *.cpp -o program[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004hclang++ -g -O0 *.cpp -o program[31D./program                      [22D[?2004l
+  Here is the List of all the Staff in the R&D Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+   Mike  11        Multimedia Prog.   2500.00      2014
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+  Here is the List of all the Staff in the IT Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+ Removing Mike from the company: Succeeded
+ -------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+
+  Here is the List of all the Programmers who know C++ in the R&D Department: 
+  ---------------------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+ Listing All Project IDs:  5 9 6 8
+-------------------------
+The Highest R&D Employee Salary is: 8000.00
+The Highest R&D Programmer Salary is: 2300.00
+The Highest R&D Software Architect Salary is: 4899.00
+
+The Average R&D Employee Salary is: 5500
+The Average R&D Programmer Salary is: 2225
+The Average R&D Software Architect Salary is: 3399
+
+The Average IT Employee Salary is: 0
+The Average IT Programmer Salary is: 1700
+The Average IT Software Architect Salary is: 0
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004h./program[9Dclang++ -g -O0 *.cpp -o program[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004hclang++ -g -O0 *.cpp -o program[31D./program                      [22D[?2004l
+  Here is the List of all the Staff in the R&D Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+   Mike  11        Multimedia Prog.   2500.00      2014      Mary         5         CSS
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+   John  21    Senior Software Eng.   4899.00      2011      Marc         6                    7
+
+ Connor  24      Software Developer   1900.00      2017      John         8                    0
+  Here is the List of all the Staff in the IT Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+ Removing Mike from the company: Succeeded
+ -------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+   John  21    Senior Software Eng.   4899.00      2011      Marc         6                    7
+
+ Connor  24      Software Developer   1900.00      2017      John         8                    0
+
+  Here is the List of all the Programmers who know C++ in the R&D Department: 
+  ---------------------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+ Listing All Project IDs:  5 9 6 8
+-------------------------
+The Highest R&D Employee Salary is: 8000.00
+The Highest R&D Programmer Salary is: 2300.00
+The Highest R&D Software Architect Salary is: 4899.00
+
+The Average R&D Employee Salary is: 5500
+The Average R&D Programmer Salary is: 2225
+The Average R&D Software Architect Salary is: 3399
+
+The Average IT Employee Salary is: 0
+The Average IT Programmer Salary is: 1700
+The Average IT Software Architect Salary is: 0
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004h./program[9Dclang++ -g -O0 *.cpp -o program[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004hclang++ -g -O0 *.cpp -o program[31D./program                      [22D[?2004l
+  Here is the List of all the Staff in the R&D Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+   Mike  11        Multimedia Prog.   2500.00      2014      Mary         5         CSS
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+   John  21    Senior Software Eng.   4899.00      2011      Marc         6                    7
+
+ Connor  24      Software Developer   1900.00      2017      John         8                    0
+  Here is the List of all the Staff in the IT Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+    Roy  32           Network Prog.   1900.00      2016       N/A         7        JAVA
+
+   Jane  35                  Tester   1500.00      2018       Roy         7        JAVA
+
+ Removing Mike from the company: Succeeded
+ -------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+   John  21    Senior Software Eng.   4899.00      2011      Marc         6                    7
+
+ Connor  24      Software Developer   1900.00      2017      John         8                    0
+
+  Here is the List of all the Programmers who know C++ in the R&D Department: 
+  ---------------------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+ Listing All Project IDs:  5 9 6 8
+-------------------------
+The Highest R&D Employee Salary is: 8000.00
+The Highest R&D Programmer Salary is: 2300.00
+The Highest R&D Software Architect Salary is: 4899.00
+
+The Average R&D Employee Salary is: 5500
+The Average R&D Programmer Salary is: 2225
+The Average R&D Software Architect Salary is: 3399
+
+The Average IT Employee Salary is: 0
+The Average IT Programmer Salary is: 1700
+The Average IT Software Architect Salary is: 0
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004h./program[9Dclang++ -g -O0 *.cpp -o program[?2004l
+[1mDepartment.cpp:177:40: [0m[0;1;31merror: [0m[1mexpected ';' after expression[0m
+    sort(result->begin(),result->end())
+[0;1;32m                                       ^
+[0m[0;32m                                       ;
+[0m1 error generated.
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004hclang++ -g -O0 *.cpp -o program[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004hclang++ -g -O0 *.cpp -o program[31D./program                      [22D[?2004l
+  Here is the List of all the Staff in the R&D Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+   Mike  11        Multimedia Prog.   2500.00      2014      Mary         5         CSS
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+   John  21    Senior Software Eng.   4899.00      2011      Marc         6                    7
+
+ Connor  24      Software Developer   1900.00      2017      John         8                    0
+  Here is the List of all the Staff in the IT Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+    Roy  32           Network Prog.   1900.00      2016       N/A         7        JAVA
+
+   Jane  35                  Tester   1500.00      2018       Roy         7        JAVA
+
+ Removing Mike from the company: Succeeded
+ -------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+   John  21    Senior Software Eng.   4899.00      2011      Marc         6                    7
+
+ Connor  24      Software Developer   1900.00      2017      John         8                    0
+
+  Here is the List of all the Programmers who know C++ in the R&D Department: 
+  ---------------------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+ Listing All Project IDs:  5 6 8 9
+-------------------------
+The Highest R&D Employee Salary is: 8000.00
+The Highest R&D Programmer Salary is: 2300.00
+The Highest R&D Software Architect Salary is: 4899.00
+
+The Average R&D Employee Salary is: 5500
+The Average R&D Programmer Salary is: 2225
+The Average R&D Software Architect Salary is: 3399
+
+The Average IT Employee Salary is: 0
+The Average IT Programmer Salary is: 1700
+The Average IT Software Architect Salary is: 0
+[1m[7m%[27m[1m[0m                                                                                ]7;file://junmings-mbp.uconnect.utah.edu/Users/junmingjin/MSD/CS6015/lab2/Buggy%20code[0m[27m[24m[Jjunmingjin@junmings-mbp Buggy code % [K[?2004heexit[?2004l
+
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+Deleting expired sessions...       2 completed.
+
+Script done on Fri Jan 27 22:35:29 2023

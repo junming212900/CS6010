@@ -1,0 +1,13 @@
+# ninja log v5
+0	8	0	CMakeFiles/clean.additional	b442ce609260329d
+8	12	0	clean	7ba24260561c7b0d
+0	7	0	CMakeFiles/clean.additional	b442ce609260329d
+7	12	0	clean	7ba24260561c7b0d
+0	357	1681439692238570202	MSDscript_autogen/timestamp	806a49763e375500
+0	357	1681439692238570202	MSDscript_autogen/mocs_compilation.cpp	806a49763e375500
+0	357	1681439692238570202	/Users/junmingjin/MSD/CS6015/QT MSD/build-MSDscript-Qt_6_5_0_for_macOS-Debug/MSDscript_autogen/timestamp	806a49763e375500
+0	357	1681439692238570202	/Users/junmingjin/MSD/CS6015/QT MSD/build-MSDscript-Qt_6_5_0_for_macOS-Debug/MSDscript_autogen/mocs_compilation.cpp	806a49763e375500
+357	1308	1681439693194066381	CMakeFiles/MSDscript.dir/MSDscript_autogen/mocs_compilation.cpp.o	584db36c1c40ad38
+357	1322	1681439693208343792	CMakeFiles/MSDscript.dir/main.cpp.o	29c2b30e156f2801
+357	1341	1681439693227884664	CMakeFiles/MSDscript.dir/mainwidget.cpp.o	2744ea47886e4d68
+1341	1440	1681439693330207939	MSDscript.app/Contents/MacOS/MSDscript	4af1903534a5709f
